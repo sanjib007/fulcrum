@@ -1,0 +1,79 @@
+/* -------------------------------------
+ * buttons
+/* ------------------------------------- */
+
+.btn-red {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    color: $light;
+    transition: all .2s ease-in;
+    &:hover,
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
+        outline: none;
+        color: $light;
+        box-shadow: none;
+    }
+    &.btn-fw {
+        width: 100%;
+    }
+    &.btn-lg {
+        padding: 15px 20px;
+    }
+}
+
+.btn-red {
+    background-color: $red;
+    border: 1px solid $red;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $red-dark;
+        border: 1px solid $red-dark;
+    }
+}
+
+
+.btn-plus {
+    @include rgba-bg($light, 0.75);
+    @include size-equal(100px);
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    transition: all .2s ease-in;
+    > i {
+        color: $black-light;
+        font-size: 20px;
+        vertical-align: middle;
+        transition: all .2s ease-in;
+    }
+}
+
+.btn-trans {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 8px 22px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    transition: all .2s ease-in;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $light;
+        color: $red;
+    }
+}

@@ -1,0 +1,153 @@
+/* -------------------------------------
+ * panel section
+/* ------------------------------------- */
+
+// helper classes
+.btn-plus-br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+}
+.btn-plus-bl {
+    @extend .btn-plus-br;
+    left: 0;
+    right: auto;
+}
+.btn-plus-rotate {
+    @include rgba-bg($red, 0.65);
+    > i {
+        color: $light;
+        transform: rotate(-45deg);
+    }
+}
+
+.panel-block {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.panel-column {
+    position: relative;
+    flex-basis: 50%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+.panel-media {
+    @include size-equal(100%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: block;
+    position: relative;
+}
+.panel-intro {
+    width: 100%;
+    padding: 50px 40px 55px;
+    > h3 {
+        letter-spacing: -0.65px;
+        margin-bottom: 8px;
+        & + p {
+            font-size: 16px;
+            font-weight: 300;
+            color: $gray-dark;
+            margin: 0;
+        }
+    }
+    .des {
+        margin-top: 35px;
+        > p {
+            color: $black-light;
+            line-height: 25px;
+            margin: 0;
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.ovl-lfc {
+    padding: 45px 120px 45px 40px;
+}
+.ovl-rtc {
+    padding: 45px 40px 45px 120px;
+}
+.panel-intro-ovl,
+.panel-txt-ovl {
+    @include size-equal(100%);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    z-index: -9;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.panel-intro-ovl {
+    @include rgba-bg($red, 0.8);
+    color: $light;
+    > h3 {
+        margin-bottom: 7px;
+        letter-spacing: -0.65px;
+        & + p {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+    .des {
+        margin: 30px 0 35px;
+        > span {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 7px;
+            display: inline-block;
+            color: #D8D8D8;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                left: calc(100% + 10px);
+                top: 50%;
+                transform: translateY(-50%);
+                width: 150px;
+                height: 1px;
+                background-color: #D8D8D8;
+                display: inline-block;
+            }
+        }
+        > p {
+            margin: 0;
+            line-height: 24px;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+.panel-txt-ovl {
+    @include rgba-bg($black, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > h2 {
+        letter-spacing: -0.55px;
+        color: $light;
+        font-style: italic;
+    }
+}
+.panel-overlay {
+    .panel-intro-ovl,
+    .panel-txt-ovl {
+        opacity: 1;
+        z-index: 9;
+    }
+}
+
+/* -------------------------------------
+ * panel section - responsive
+/* ------------------------------------- */

@@ -1,0 +1,69 @@
+/* -------------------------------------
+ * contact
+/* ------------------------------------- */
+.contact-block {
+    display: flex;
+    > * {
+        flex-basis: 50%;
+    }
+}
+.contact-info {
+    background: rgba(0, 0, 0, 0.85) url('../images/map.png') no-repeat scroll center center;
+    background-size: contain;
+    color: $light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info-des {
+        span {
+            display: inline-block;
+        }
+        > h4 {
+            margin-bottom: 55px;
+            font-style: italic;
+            > span {
+                font-weight: 300;
+                display: block;
+                font-size: 14px;
+                letter-spacing: 1px;
+            }
+        }
+        .c-name {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        address {
+            margin-bottom: 5px;
+            font-style: italic;
+        }
+        .ft-text {
+            margin-top: 25px;
+            font-size: 13px;
+        }
+    }
+}
+
+.contact-form {
+    padding: 0 30px;
+    > h2 {
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: -11px;
+        margin-bottom: 35px;
+    }
+}
+.form-contact {
+    .form-group {
+        margin: 0;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        > .btn-red {
+            margin-top: 18px;
+            text-transform: uppercase;
+        }
+    }
+}
