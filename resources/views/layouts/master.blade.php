@@ -39,5 +39,6 @@
 <script src="{{asset('assets/scripts/scripts.min.js')}}"></script>
 
 @yield('script')
+
 </body>
 </html>
