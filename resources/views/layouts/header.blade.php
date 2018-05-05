@@ -13,7 +13,7 @@
         <div class="main-nav">
             <ul class="nav-list">
      <li class="{{ Request::is('/') ? 'active' : ''  }}"><a href="/">Home</a></li>
-       <li class="{{ Request::is('projects') ? 'active' : ''  }}"><a href="/projects">About</a></li>
+       <li class="{{ Request::is('projects') ? 'active' : ''  }}"><a href="/projects">Projects</a></li>
       <li class="{{ Request::is('contact') ? 'active' : ''  }}"><a href="/contact">Contact</a></li>
              
             </ul>
